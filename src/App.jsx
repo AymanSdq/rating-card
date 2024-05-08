@@ -19,7 +19,7 @@ function App() {
           <p className=' text-lightGrey '>Please let us know how we did with your support request. All feedback is appreciated 
             to help us improve our offering!</p>
 
-          <div className=' flex gap-6'>
+          <div className=' flex gap-6 justify-center'>
 
             {/* Items 1 - 2 - 3 - 4 - 5 - */}
             <div className='bg-veryDarkBlue w-10 h-10 rounded-full flex justify-center items-center text-white'>
