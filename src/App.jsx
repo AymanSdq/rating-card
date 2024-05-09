@@ -19,31 +19,31 @@ function App() {
           <p className=' text-lightGrey '>Please let us know how we did with your support request. All feedback is appreciated 
             to help us improve our offering!</p>
 
-          <div className=' flex gap-6 justify-center'>
+          <div className=' flex gap-6 justify-between'>
 
             {/* Items 1 - 2 - 3 - 4 - 5 - */}
-            <div className='bg-veryDarkBlue w-10 h-10 rounded-full flex justify-center items-center text-white'>
+            <div className='bg-veryDarkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor'>
               <p>1</p>
             </div>
             {/* Items 1 - 2 - 3 - 4 - 5 - */}
-            <div className='bg-veryDarkBlue w-10 h-10 rounded-full flex justify-center items-center text-white'>
+            <div className='bg-veryDarkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor'>
               <p>2</p>
             </div>
             {/* Items 1 - 2 - 3 - 4 - 5 - */}
-            <div className='bg-veryDarkBlue w-10 h-10 rounded-full flex justify-center items-center text-white'>
+            <div className='bg-veryDarkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor'>
               <p>3</p> 
             </div>
             {/* Items 1 - 2 - 3 - 4 - 5 - */}
-            <div className='bg-veryDarkBlue w-10 h-10 rounded-full flex justify-center items-center text-white'>
+            <div className='bg-veryDarkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor'>
               <p>4</p>   
             </div>
             {/* Items 1 - 2 - 3 - 4 - 5 - */}
-            <div className='bg-veryDarkBlue w-10 h-10 rounded-full flex justify-center items-center text-white'>
+            <div className='bg-veryDarkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor'>
               <p>5</p> 
             </div>
           </div>
 
-          <button className='flex justify-center items-center rounded-full bg-orangeColor text-white py-2'>Submit</button>
+          <button className='flex justify-center items-center rounded-full bg-orangeColor text-white py-2 hover:text-orangeColor hover:bg-white'>Submit</button>
 
         </section>
 
