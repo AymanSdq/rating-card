@@ -58,6 +58,11 @@ function App() {
 
             <p className=' text-orangeColor bg-slate-600 text-sm px-4 py-2 rounded-full'>You selected 1 out of 5</p>
 
+            <h1 className='text-2xl text-white'>Thank you!</h1>
+
+            <p className=' text-lightGrey text-center'>We appreciate you taking the time to give a rating. If you ever need more support, 
+                  don’t hesitate to get in touch!</p>
+
         </section>
 
       </main>
