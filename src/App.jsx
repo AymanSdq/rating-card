@@ -53,7 +53,10 @@ function App() {
 
         {/* second section  */}
         <section className='p-8 gap-6 w-[400px] bg-darkBlue rounded-md  flex-col flex justify-center items-center'>
+
             <img src="./illustration-thank-you.svg" alt="checkout image" />
+
+            <p className=' text-orangeColor bg-slate-600 text-sm px-4 py-2 rounded-full'>You selected 1 out of 5</p>
 
         </section>
 
