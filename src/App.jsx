@@ -52,7 +52,7 @@ function App() {
     <>
       <main className=' bg-veryDarkBlue w-full h-screen flex justify-center items-center' role='main'>
         
-        <section className={`p-8 gap-6 w-[400px] bg-gradient-to-b from-darkBlue to-lightBlue rounded-3xl  flex-col ${submitForm ? 'flex' : 'hidden'}`}>
+        <section className={`p-8 gap-6 sm:w-[400px]  w-[350px] bg-gradient-to-b from-darkBlue to-lightBlue rounded-3xl  flex-col ${submitForm ? 'flex' : 'hidden'}`}>
           {/* Icon container */}
           <div className='p-1 bg-darkBlue w-12 h-12 rounded-full  flex justify-center items-center'>
             <img src="/icon-star.svg" alt="Star Icon"  className=' w-7'/>
@@ -63,7 +63,7 @@ function App() {
           <p className=' text-lightGrey '>Please let us know how we did with your support request. All feedback is appreciated 
             to help us improve our offering!</p>
 
-          <div className=' flex gap-6 justify-between'>
+          <div className=' flex gap-3 justify-between'>
 
             {/* Items 1 - 2 - 3 - 4 - 5 - */}
             <button onClick={() => { setGetNumber(1) }} name="1" className={`bg-darkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor ${value1}`}>
@@ -93,7 +93,7 @@ function App() {
 
 
         {/* second section  */}
-        <section className={`p-8 gap-6 w-[400px] bg-gradient-to-b from-darkBlue to-lightBlue rounded-3xl text-center  flex-col ${submitForm ? 'hidden' : 'flex'}` }>
+        <section className={`p-8 gap-6 sm:w-[400px] w-[350px] bg-gradient-to-b from-darkBlue to-lightBlue rounded-3xl text-center  flex-col ${submitForm ? 'hidden' : 'flex'}` }>
 
             <img src="./illustration-thank-you.svg" alt="checkout image" />
 
