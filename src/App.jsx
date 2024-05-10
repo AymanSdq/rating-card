@@ -1,26 +1,37 @@
 import { useState } from 'react'
 import './App.css'
+import { flushSync } from 'react-dom';
 
 function App() {
 
-  const [getNumber , setGetNumber] = useState();
+  const [getNumber , setGetNumber] = useState(0);
 
   const [showIt, setShowIt] = useState(false);
 
   const [submitForm , setSubmitForm] = useState(true)
 
 
-  const clickTogetValue = (e) => {
-    const setit = e.target.value;
-    setGetNumber(setit);
-    console.log(getNumber)
+  const clickTogetValue = (events) => {
+    
+    const setit = events.target.value;
+    console.log(events)
+
+    flushSync(()=>{
+      setGetNumber(setit);
+    })
+
+
+   
+  
+
   }
+
 
   const onClickShowIt = () => {
     setShowIt(!showIt)
   }
 
-  const onClickSubmit = (e) => {
+  const onClickSubmit = () => {
     setSubmitForm(!submitForm)
   }
 
@@ -41,9 +52,9 @@ function App() {
     <>
       <main className=' bg-veryDarkBlue w-full h-screen flex justify-center items-center' role='main'>
         
-        <section className={`p-8 gap-6 w-[400px] bg-darkBlue rounded-md  flex-col ${submitForm ? 'flex' : 'hidden'}`}>
+        <section className={`p-8 gap-6 w-[400px] bg-gradient-to-b from-darkBlue to-lightBlue rounded-3xl  flex-col ${submitForm ? 'flex' : 'hidden'}`}>
           {/* Icon container */}
-          <div className='p-1 bg-veryDarkBlue w-12 h-12 rounded-full  flex justify-center  items-center'>
+          <div className='p-1 bg-darkBlue w-12 h-12 rounded-full  flex justify-center items-center'>
             <img src="/icon-star.svg" alt="Star Icon"  className=' w-7'/>
           </div>
 
@@ -55,23 +66,23 @@ function App() {
           <div className=' flex gap-6 justify-between'>
 
             {/* Items 1 - 2 - 3 - 4 - 5 - */}
-            <button onClick={clickTogetValue} value="1" className={`bg-veryDarkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor ${value1}`}>
+            <button onClick={() => { setGetNumber(1) }} name="1" className={`bg-darkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor ${value1}`}>
               <p>1</p>
             </button>
             {/* Items 1 - 2 - 3 - 4 - 5 - */}
-            <button onClick={clickTogetValue} value="2" className={`bg-veryDarkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor ${value2}`}>
+            <button onClick={() => { setGetNumber(2) }} name="2" className={`bg-darkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor ${value2}`}>
               <p>2</p>
             </button>
             {/* Items 1 - 2 - 3 - 4 - 5 - */}
-            <button onClick={clickTogetValue} value="3" className={`bg-veryDarkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor ${value3}`}>
+            <button onClick={() => { setGetNumber(3) }} name="3" className={`bg-darkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor ${value3}`}>
               <p>3</p> 
             </button>
             {/* Items 1 - 2 - 3 - 4 - 5 - */}
-            <button onClick={clickTogetValue} value="4" className={`bg-veryDarkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor ${value4}`}>
+            <button onClick={() => { setGetNumber(4) }} name="4" className={`bg-darkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor ${value4}`}>
               <p>4</p>   
             </button>
             {/* Items 1 - 2 - 3 - 4 - 5 - */}
-            <button onClick={clickTogetValue} value="5" className={`bg-veryDarkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor ${value5}`}>
+            <button onClick={() => { setGetNumber(5) }} name="5" className={`bg-darkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor ${value5}`}>
               <p>5</p> 
             </button>
           </div>
@@ -82,7 +93,7 @@ function App() {
 
 
         {/* second section  */}
-        <section className={`p-8 gap-6 w-[400px] bg-darkBlue rounded-md text-center  flex-col ${submitForm ? 'hidden' : 'flex'}` }>
+        <section className={`p-8 gap-6 w-[400px] bg-gradient-to-b from-darkBlue to-lightBlue rounded-3xl text-center  flex-col ${submitForm ? 'hidden' : 'flex'}` }>
 
             <img src="./illustration-thank-you.svg" alt="checkout image" />
 
