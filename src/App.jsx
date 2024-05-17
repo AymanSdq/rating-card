@@ -11,22 +11,6 @@ function App() {
   const [submitForm , setSubmitForm] = useState(true)
 
 
-  const clickTogetValue = (events) => {
-    
-    const setit = events.target.value;
-    console.log(events)
-
-    flushSync(()=>{
-      setGetNumber(setit);
-    })
-
-
-   
-  
-
-  }
-
-
   const onClickShowIt = () => {
     setShowIt(!showIt)
   }
@@ -50,7 +34,7 @@ function App() {
 
   return (
     <>
-      <main className=' bg-veryDarkBlue w-full h-screen flex justify-center items-center' role='main'>
+      <main className=' bg-veryDarkBlue w-full h-screen flex justify-center items-center'>
         
         <section className={`p-8 gap-6 sm:w-[400px]  w-[350px] bg-gradient-to-b from-darkBlue to-lightBlue rounded-3xl  flex-col ${submitForm ? 'flex' : 'hidden'}`}>
           {/* Icon container */}
@@ -58,7 +42,7 @@ function App() {
             <img src="/icon-star.svg" alt="Star Icon"  className=' w-7'/>
           </div>
 
-          <h1 className=' text-white text-xl'>How did we do ?</h1>
+          <h1 className=' text-white font-bold text-2xl'>How did we do ?</h1>
 
           <p className=' text-lightGrey '>Please let us know how we did with your support request. All feedback is appreciated 
             to help us improve our offering!</p>
@@ -67,23 +51,23 @@ function App() {
 
             {/* Items 1 - 2 - 3 - 4 - 5 - */}
             <button onClick={() => { setGetNumber(1) }} name="1" className={`bg-darkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor ${value1}`}>
-              <p>1</p>
+              1
             </button>
             {/* Items 1 - 2 - 3 - 4 - 5 - */}
             <button onClick={() => { setGetNumber(2) }} name="2" className={`bg-darkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor ${value2}`}>
-              <p>2</p>
+              2
             </button>
             {/* Items 1 - 2 - 3 - 4 - 5 - */}
             <button onClick={() => { setGetNumber(3) }} name="3" className={`bg-darkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor ${value3}`}>
-              <p>3</p> 
+              3
             </button>
             {/* Items 1 - 2 - 3 - 4 - 5 - */}
             <button onClick={() => { setGetNumber(4) }} name="4" className={`bg-darkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor ${value4}`}>
-              <p>4</p>   
+              4
             </button>
             {/* Items 1 - 2 - 3 - 4 - 5 - */}
             <button onClick={() => { setGetNumber(5) }} name="5" className={`bg-darkBlue w-12 h-12 rounded-full flex justify-center items-center text-white hover:bg-orangeColor ${value5}`}>
-              <p>5</p> 
+              5
             </button>
           </div>
 
